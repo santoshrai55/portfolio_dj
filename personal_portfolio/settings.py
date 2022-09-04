@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'blog_app.apps.BlogAppConfig',
-    'portfolio_app.apps.ortfolioAppConfig',
+    'portfolio_app.apps.PortfolioAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
