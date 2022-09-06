@@ -17,7 +17,7 @@
         <!-- ------------- Nav Bar --------- -->
         <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Eleventh navbar example">
             <div class="container-fluid fs-4">
-                <a class="navbar-brand text-info" href="#"><i class="bi bi-house-fill"></i></a>
+                <a class="navbar-brand text-info" href="{% url 'portfolio' %}"><i class="bi bi-house-fill"></i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
                             <a class="nav-link" href="#">Resume</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blogs</a>
+                            <a class="nav-link" href="{% url 'blogs' %}">Blogs</a>
                         </li>
                     </ul>
                     <form role="search">
