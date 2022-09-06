@@ -7,3 +7,7 @@ from . models import Project
 def portfolio_home(request):
     projects = Project.objects.all()
     return render(request, 'portfolio_app/home.html', {'projects': projects})
+
+
+def resume(request):
+    return render(request, 'portfolio_app/resume.html')
