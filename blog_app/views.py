@@ -8,6 +8,6 @@ def blog(request):
     return render(request, 'blog_app/blog.html', {'blogs': blogs})
 
 
-def detail(request, blog_title):
-
-    return render(request, 'blog/detail.html')
+def detail(request, title):
+    blog = Blog.objects.get(title=title)
+    return render(request, 'blog_app/detail.html', {'blog': blog})
