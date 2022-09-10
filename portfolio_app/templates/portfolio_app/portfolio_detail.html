@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block header-footer %} <div class="row align-items-md-stretch">
+    <div class="h-100 m-5 bg-light border rounded-3">
+        <div class="m-5">
+            <h2>{{portfolio.title}}</h2>
+            <img style="width: 100%;" src="{{portfolio.image.url}}" alt="">
+        </div>
+        <p class="m-5 p-2 fs-4 ">{{portfolio.description}}</p>
+        <button class="btn btn-outline-primary" type="button"></button>
+    </div>
+</div>
+<p></p> {% endblock header-footer %}

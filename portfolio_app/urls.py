@@ -4,5 +4,7 @@ app_name = 'portfolio_app'
 
 urlpatterns = [
     path('', views.portfolio_home, name='portfolio_home'),
+    path('portfolio/<str:portfolio>',
+         views.portfolio_detail, name='portfolio_detail'),
     path('resume', views.resume, name='resume')
 ]

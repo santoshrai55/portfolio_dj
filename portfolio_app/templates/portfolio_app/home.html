@@ -22,7 +22,7 @@
         <div class="card shadow-sm">
           <img src="{{item.image.url}}" alt="" srcset="" />
           <div class="card-body">
-            <a href="">
+            <a href="{% url 'portfolio_app:portfolio_detail' item.title%}">
               <h3>{{item.title}}</h3>
             </a>
             <p class="card-text">{{item.description}}</p>
