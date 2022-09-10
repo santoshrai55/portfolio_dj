@@ -22,10 +22,10 @@
         <div class="card shadow-sm">
           <img src="{{item.image.url}}" alt="" srcset="" />
           <div class="card-body">
-            <a href="{% url 'portfolio_app:portfolio_detail' item.title%}">
-              <h3>{{item.title}}</h3>
+            <a class="link-info" href="{% url 'portfolio_app:portfolio_detail' item.title%}">
+              <h3 class="fs-5">{{item.title}}</h3>
             </a>
-            <p class="card-text">{{item.description}}</p>
+            <p class="card-text">{{item.description|slice:300|safe}}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group"></div>
               <small class="text-muted">9 mins</small>
