@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . models import Project
+from . forms import ProjectForm
 
 # Create your views here.
 
@@ -16,3 +17,18 @@ def portfolio_detail(request, portfolio):
 
 def resume(request):
     return render(request, 'portfolio_app/resume.html')
+
+
+def post_project(request):
+    context = {}
+
+    # create object of form
+    form = ProjectForm(request.POST or None, request.FILES or None)
+
+    # Check if form data is valid
+    if form.is_valid():
+        # save the form data to model
+        form.save()
+
+    context['form'] = form
+    return render(request, 'portfolio_app/post_project.html', context)
