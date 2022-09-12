@@ -1,6 +1,8 @@
+from time import timezone
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 # Create your models here.
 
@@ -13,7 +15,7 @@ class Blog_item(models.Model):
     blog_content = RichTextField(blank=True, null=True)
     blog_image = models.ImageField(
         upload_to='blog_app/images/')
-    published_date = models.DateTimeField(auto_now=True)
+    published_date = models.DateTimeField(default=timezone.now())
     featured = models.BooleanField(default=True)
 
     def __str__(self):
