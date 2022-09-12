@@ -17,4 +17,4 @@ class Blog_item(models.Model):
     featured = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.title + ' | ' + str(self.author)
+        return self.title + ' by ' + str(self.author.first_name)
