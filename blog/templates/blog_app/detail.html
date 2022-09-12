@@ -2,10 +2,11 @@
     <div class="h-100 m-5 bg-light border rounded-3">
         <div class="m-5">
             <h2>{{blog.title}}</h2>
+            <p class="text-primary">- by {{blog.author.first_name}}</p>
             <p class="text-muted">published on: {{blog.published_date}}</p>
             <img style="width: 100%;" src="{{blog.blog_image.url}}" alt="">
         </div>
-        <p class="m-5 p-2 fs-4 ">{{blog.blog_content}}</p>
+        <p class="m-5 p-2 fs-4 ">{{blog.blog_content|safe}}</p>
         <button class="btn btn-outline-primary" type="button">{% if blog.featured %} Featured {% endif %}</button>
     </div>
 </div>

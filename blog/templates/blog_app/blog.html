@@ -5,7 +5,7 @@
         <div class=" col-md-6 px-0">
             <h1 class="display-4 fst-italic"> {{blogs.0.title}} </h1>
             <p class="lead my-3">{{blogs.0.blog_content|slice:":150"}}</p>
-            <p class="lead mb-0"><a href="{% url 'blog_app:detail' blogs.0.title %}" class="text-white fw-bold">Continue
+            <p class="lead mb-0"><a href="{% url 'blog:detail' blogs.0.title %}" class="text-white fw-bold">Continue
                     reading...</a></p>
         </div>
     </div>
@@ -17,7 +17,7 @@
                     <h3 class="mb-0">{{blogs.1.title}}</h3>
                     <div class="mb-1 text-muted">{{blogs.1.published_date}}</div>
                     <p class="card-text mb-auto">{{blogs.1.blog_content|slice:":100"}}</p>
-                    <a href="{% url 'blog_app:detail' blogs.1.title%}" class="stretched-link">Continue reading</a>
+                    <a href="{% url 'blog:detail' blogs.1.title%}" class="stretched-link">Continue reading</a>
                 </div>
                 <div class="col-auto d-none d-lg-block" style="width: 300px">
                     <img src="{{blogs.1.blog_image.url}}" alt="" style="width: 100%;">
