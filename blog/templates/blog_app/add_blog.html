@@ -1,5 +1,7 @@
-{% extends "base.html" %} {% block header-footer %} <h1>Add Blogs</h1>
-<form action="" method="post"> {% csrf_token %} {{form.media}} {{form.as_p}} <button class="btn btn-primary"
-        type="submit">Add</button>
-    </div>
-</form> {% endblock header-footer %}
+{% extends "base.html" %} {% block header-footer %} <div class="container" style="max-width:900px; margin: 0 auto">
+    <h1 class="text-center fs-2 mt-5">Add a Blog</h1>
+    <form action="" method="post" style="max-width: 830px"> {% csrf_token %} {{form.media}} {{form.as_p}} <button
+            class="btn btn-primary" type="submit">Add</button>
+</div>
+</form>
+</div> {% endblock header-footer %}
