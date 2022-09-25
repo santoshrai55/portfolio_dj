@@ -34,13 +34,17 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'blog:blogs' %}">Blogs</a>
-                        </li>
-                        <li class="nav-item">
+                        </li> {% if user.is_authenticated  %} <li class="nav-item">
                             <a class="nav-link" href="{% url 'blog:add_blog' %}">Add a Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'portfolio_app:post_project' %}">Add Projects</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Logout</a>
+                        </li> {% endif %} {% if user.is_authenticated  != True %} <li class="nav-item">
+                            <a class="nav-link" href=" ">Login</a>
+                        </li> {% endif %}
                     </ul>
                     <form role="search">
                         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
