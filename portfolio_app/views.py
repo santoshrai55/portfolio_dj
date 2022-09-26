@@ -10,6 +10,14 @@ def portfolio_home(request):
     return render(request, 'portfolio_app/home.html', {'projects': projects})
 
 
+def login(request):
+    if request.method == "POST":
+        return render(request, "portfolio_app/home.html")
+
+    else:
+        return render(request, "portfolio_app/login.html")
+
+
 def portfolio_detail(request, portfolio):
     portfolio = Project.objects.get(title=portfolio)
     return render(request, 'portfolio_app/portfolio_detail.html', {'portfolio': portfolio})
