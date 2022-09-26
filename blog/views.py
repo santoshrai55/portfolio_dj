@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from . models import Blog_item
 from django.views.generic import CreateView
 from . forms import BlogForm
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 
@@ -16,6 +18,7 @@ def detail(request, title):
     return render(request, 'blog_app/detail.html', {'blog': blog})
 
 
+# @login_required
 class AddBlog(CreateView):
     model = Blog_item
     form_class = BlogForm
