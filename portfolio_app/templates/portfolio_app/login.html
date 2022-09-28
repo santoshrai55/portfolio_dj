@@ -1,7 +1,7 @@
-{% extends "base.html" %} {% block header-footer %} <div class="container w-50">
+{% extends "base.html" %} {% block header-footer %} <div class="container" style="max-width: 400px;">
     <main class="form-signin w-100 m-auto text-center">
-        <form method="POST"> {% csrf_token %} <i class="bi bi-person-circle display-1 text-info"></i>
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <form method="POST"> {% csrf_token %} <i class="bi bi-person-circle display-1 text-info text-center"></i>
+            <h1 class="h3 mb-5 mt-2 fw-normal">Please sign in</h1>
             <div class="form-floating m-3">
                 <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                 <label for="username">User Name</label>
