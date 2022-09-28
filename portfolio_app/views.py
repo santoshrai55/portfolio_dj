@@ -1,7 +1,8 @@
+
 from django.shortcuts import render, redirect
 from . models import Project
 from . forms import ProjectForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, ogout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -14,11 +15,19 @@ def portfolio_home(request):
 
 
 def login(request):
-    if request.method == "POST":
-        return render(request, "portfolio_app/home.html")
+    if request.method == 'POST':
+        username_passed = request.POST['username']
+        password__passed = request.POST['password']
+        user = authenticate(request, username=username_passed,
+                            password=password__passed)
+        if user is not None:
+            login(request, user)
+            # Redirect to a success page.
 
+            return redirect('mini_app:home')
     else:
-        return render(request, "portfolio_app/login.html")
+        # Return an 'invalid login' error message.
+        return render(request, 'mini_app/login.html')
 
 
 def portfolio_detail(request, portfolio):
