@@ -41,7 +41,7 @@
                             <a class="nav-link" href="{% url 'portfolio_app:post_project' %}">Add Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Logout</a>
+                            <a class="nav-link" href="{% url 'portfolio_app:logout' %}">Logout</a>
                         </li> {% endif %} {% if user.is_authenticated  != True %} <li class="nav-item">
                             <a class="nav-link" href="{% url 'portfolio_app:login' %}">Login</a>
                         </li> {% endif %}

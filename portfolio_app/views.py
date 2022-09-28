@@ -53,3 +53,10 @@ def post_project(request):
 
     context['form'] = form
     return render(request, 'portfolio_app/post_project.html', context)
+
+
+def userLogout(request):
+    logout(request)
+    # fields = MiniCrud.objects.all()
+    # Redirect to a success page.
+    return redirect('portfolio_app:portfolio_home')
