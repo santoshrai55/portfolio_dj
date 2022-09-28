@@ -3,12 +3,12 @@
         <form method="POST"> {% csrf_token %} <i class="bi bi-person-circle display-1 text-info"></i>
             <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
             <div class="form-floating m-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+                <label for="username">User Name</label>
             </div>
             <div class="form-floating m-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                <label for="password">Password</label>
             </div>
             <button class="w-50 btn btn-lg btn-info" type="submit">Sign in</button>
         </form>

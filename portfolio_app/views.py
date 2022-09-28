@@ -2,9 +2,10 @@
 from django.shortcuts import render, redirect
 from . models import Project
 from . forms import ProjectForm
-from django.contrib.auth import login, authenticate, ogout
+from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -14,7 +15,7 @@ def portfolio_home(request):
     return render(request, 'portfolio_app/home.html', {'projects': projects})
 
 
-def login(request):
+def mylogin(request):
     if request.method == 'POST':
         username_passed = request.POST['username']
         password__passed = request.POST['password']
@@ -24,10 +25,10 @@ def login(request):
             login(request, user)
             # Redirect to a success page.
 
-            return redirect('mini_app:home')
+            return redirect('portfolio_app:portfolio_home')
     else:
         # Return an 'invalid login' error message.
-        return render(request, 'mini_app/login.html')
+        return render(request, 'portfolio_app/login.html')
 
 
 def portfolio_detail(request, portfolio):

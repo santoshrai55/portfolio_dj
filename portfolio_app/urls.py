@@ -8,5 +8,5 @@ urlpatterns = [
          views.portfolio_detail, name='portfolio_detail'),
     path('resume', views.resume, name='resume'),
     path('form', views.post_project, name='post_project'),
-    path('login', views.login, name='login')
+    path('login', views.mylogin, name='login')
 ]
