@@ -7,7 +7,8 @@ class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
 
-        fields = "__all__"
-
-        # we can also exclude fields
-        # exclude = ['title']
+        fields = ('title', 'description', 'image',)
+        widgets = {'title': forms.TextInput(attrs={'class': 'form-control'}),
+                   'description': forms.Textarea(attrs={'class': 'form-control'}),
+                   'image': forms.FileInput(attrs={'class': 'form-control'}),
+                   }
