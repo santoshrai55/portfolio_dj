@@ -1,7 +1,7 @@
 
 from django.shortcuts import render, redirect
-from . models import Project
-from . forms import ProjectForm
+from .models import Project
+from .forms import ProjectForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
